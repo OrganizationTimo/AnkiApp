@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:ankiapp/src/pages/register/hero_component.dart';
-
 import 'input_component.dart';
 
 class RegisterPage extends StatefulWidget {
@@ -40,7 +39,7 @@ class _RegisterPageState extends State<RegisterPage> {
             ),
           ),
           const SizedBox(
-            height: 50,
+            height: 20,
           ),
           const InputComponent(),
         ],
