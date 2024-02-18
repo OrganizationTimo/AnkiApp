@@ -13,6 +13,8 @@ class _InputComponentState extends State<InputComponent> {
   final firstNameController = TextEditingController();
   final lastNameController = TextEditingController();
 
+  bool error = false;
+
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -28,6 +30,11 @@ class _InputComponentState extends State<InputComponent> {
             ),
             child: Center(
               child: TextField(
+                onChanged: (String text) {
+                  setState(() {
+                    error = false;
+                  });
+                },
                 controller: emailController,
                 textAlign: TextAlign.center,
                 cursorColor: Colors.white,
@@ -55,6 +62,11 @@ class _InputComponentState extends State<InputComponent> {
             ),
             child: Center(
               child: TextField(
+                onChanged: (String text) {
+                  setState(() {
+                    error = false;
+                  });
+                },
                 controller: ageController,
                 textAlign: TextAlign.center,
                 cursorColor: Colors.white,
@@ -82,6 +94,11 @@ class _InputComponentState extends State<InputComponent> {
             ),
             child: Center(
               child: TextField(
+                onChanged: (String text) {
+                  setState(() {
+                    error = false;
+                  });
+                },
                 controller: firstNameController,
                 textAlign: TextAlign.center,
                 cursorColor: Colors.white,
@@ -109,6 +126,11 @@ class _InputComponentState extends State<InputComponent> {
             ),
             child: Center(
               child: TextField(
+                onChanged: (String text) {
+                  setState(() {
+                    error = false;
+                  });
+                },
                 controller: lastNameController,
                 textAlign: TextAlign.center,
                 cursorColor: Colors.white,
@@ -126,8 +148,24 @@ class _InputComponentState extends State<InputComponent> {
           const SizedBox(
             height: 50,
           ),
+          error
+              ? const Text(
+                  "Error occurred",
+                  style: TextStyle(
+                    color: Colors.red,
+                  ),
+                )
+              : Container(),
           TextButton(
             onPressed: () {
+              if (emailController.text == "" ||
+                  ageController.text == "" ||
+                  firstNameController.text == "" ||
+                  lastNameController.text == "") {
+                return setState(() {
+                  error = true;
+                });
+              }
               print(emailController.text);
               print(ageController.text);
               print(firstNameController.text);
