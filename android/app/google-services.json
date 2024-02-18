@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "548324169121",
+    "project_id": "project-timowenz",
+    "storage_bucket": "project-timowenz.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:548324169121:android:ad369b47eb89d1215fe7e0",
+        "android_client_info": {
+          "package_name": "com.example.ankiapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXHBvlWLToTWMFTI_5jVv3fpkv2UlgJKY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
